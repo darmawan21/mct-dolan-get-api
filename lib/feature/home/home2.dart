@@ -245,8 +245,12 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 Column(
-                    // children: mywidgets,
-                    children: [],
+                  children: <Widget>[
+                      for (int i=0; i< listCL; i++)
+                        Text(
+                          dataModel.data?.checklists?[i].name ?? "",
+                        ),
+                  ],
                 ),
               ],
             ),
